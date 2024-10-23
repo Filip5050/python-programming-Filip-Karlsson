@@ -5,7 +5,7 @@ import numpy as np
 X = []
 Y = []
 
-with open(r"C:\Code\python-programming-Filip-Karlsson\Data\unlabelled_data.csv", "r") as f_read:
+with open(r"C:\Code\python-programming-Filip-Karlsson\Labs\Labb3\Data\unlabelled_data.csv", "r") as f_read:
    lines = f_read.readlines()
    for line in lines:
       split = line.split()

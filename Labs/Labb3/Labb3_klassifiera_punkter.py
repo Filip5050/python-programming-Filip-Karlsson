@@ -6,7 +6,7 @@ import numpy as np
 X = []
 Y = []
 
-with open(r"C:\Code\python-programming-Filip-Karlsson\Data\unlabelled_data.csv", "r") as f_read:
+with open(r"C:\Code\python-programming-Filip-Karlsson\Labs\Labb3\Data\unlabelled_data.csv", "r") as f_read:
     lines = f_read.readlines()
     for line in lines:
         x, y = map(float, line.split(","))
@@ -37,8 +37,8 @@ def classify_points(X, Y, slope, intercept):
 #kallar på funktionen
 labelled_points = classify_points(X, Y, slope, intercept)
 
-# Write labelled points to a new file
-with open(r"C:\Code\python-programming-Filip-Karlsson\Data\labelled_data.csv", "w") as f_write:
+
+with open(r"C:\Code\python-programming-Filip-Karlsson\Labs\Labb3\Data\unlabelled_data.csv", "w") as f_write:
     f_write.write("1 above the line, 0 under the line \n")
     for x, y, label in labelled_points:
         f_write.write(f"{x},{y},{label}\n")
